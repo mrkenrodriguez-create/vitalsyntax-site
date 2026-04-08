@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vital Syntax LLC</title>
+  <meta name="description" content="Vital Syntax LLC develops digital wellness products and provides consulting services to digital health companies and healthcare organizations." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: rgba(255,255,255,0.07);
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --accent: #7dd3fc;
+      --accent-2: #a78bfa;
+      --line: rgba(255,255,255,0.12);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(125, 211, 252, 0.18), transparent 34%),
+        radial-gradient(circle at top right, rgba(167, 139, 250, 0.18), transparent 28%),
+        linear-gradient(180deg, #0b1021 0%, #111827 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+      background: rgba(11, 16, 33, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand img {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .brand-text strong {
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+    }
+    .brand-text span {
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 12px 18px;
+      border: 1px solid rgba(125, 211, 252, 0.35);
+      background: linear-gradient(135deg, rgba(125,211,252,.18), rgba(167,139,250,.18));
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+    }
+    .button.secondary {
+      background: transparent;
+      border-color: var(--line);
+    }
+    .hero {
+      padding: 88px 0 56px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 30px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.4rem);
+      line-height: 1.05;
+      margin: 0 0 16px;
+      letter-spacing: -0.03em;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .hero-card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.06);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+    }
+    .hero-card h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.15rem;
+    }
+    .hero-card p {
+      color: var(--muted);
+      margin-top: 0;
+    }
+    section {
+      padding: 34px 0;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+    .section-copy {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 0 24px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+    .card p, .card li {
+      color: var(--muted);
+    }
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+    .checklist {
+      padding-left: 18px;
+      margin: 0;
+    }
+    .checklist li { margin-bottom: 8px; }
+    .cta {
+      margin: 26px 0 0;
+      padding: 28px;
+      border-radius: 24px;
+      border: 1px solid rgba(125, 211, 252, 0.28);
+      background: linear-gradient(135deg, rgba(125,211,252,.10), rgba(167,139,250,.10));
+    }
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.25);
+      margin-top: 14px;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    footer {
+      padding: 44px 0 60px;
+      color: var(--muted);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+    .small { font-size: 0.92rem; }
+    @media (max-width: 900px) {
+      .hero-grid, .grid-3, .product, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        align-items: flex-start;
+        padding: 12px 0;
+      }
+      .nav-links {
+        justify-content: flex-start;
+      }
+      .brand {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">
+          <img src="logo.jpg" alt="Vital Syntax logo" />
+          <div class="brand-text">
+            <strong>Vital Syntax LLC</strong>
+            <span>Digital wellness, health technology, and advisory services</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#products">Products</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Official website for Vital Syntax LLC</div>
+          <h1>Technology, reflection, and health innovation with a human center.</h1>
+          <p class="lead">
+            Vital Syntax LLC develops thoughtful digital products and provides consulting services to digital health companies,
+            healthcare organizations, and teams navigating transformation. Our current flagship product is <strong>The Sanctuary</strong>,
+            a guided wellness experience designed to support meditation, journaling, and structured inner work.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#products">Explore The Sanctuary</a>
+            <a class="button secondary" href="mailto:info@vitalsyntax.net">Contact Vital Syntax</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h3>Company Overview</h3>
+          <p>
+            <strong>Legal name:</strong> Vital Syntax LLC<br />
+            <strong>Primary product:</strong> The Sanctuary<br />
+            <strong>Capabilities:</strong> Product development, digital health advisory, healthcare technology consulting
+          </p>
+          <p class="small">
+            Vital Syntax works at the intersection of software, reflection, personal wellbeing, and healthcare innovation.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2 class="section-title">About Vital Syntax</h2>
+        <p class="section-copy">
+          Vital Syntax LLC is a company focused on building intentional digital experiences while also helping health technology companies
+          and healthcare organizations solve practical operational and transformation challenges. We believe technology can be both useful
+          and humane: capable of improving systems while also creating space for focus, healing, and self-reflection.
+        </p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <h2 class="section-title">Consulting Services</h2>
+        <p class="section-copy">
+          In addition to product development, Vital Syntax provides advisory and consulting support to digital health companies and healthcare organizations.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Digital Health Strategy</h3>
+            <p>Support for healthcare technology initiatives, implementation planning, product positioning, and operational design.</p>
+          </div>
+          <div class="card">
+            <h3>Healthcare Transformation</h3>
+            <p>Guidance for organizations navigating workflow redesign, platform adoption, implementation challenges, and change management.</p>
+          </div>
+          <div class="card">
+            <h3>Product and Advisory Support</h3>
+            <p>Consulting for product development, user experience direction, launch readiness, and technology-enabled care initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="wrap">
+        <h2 class="section-title">Featured Product: The Sanctuary</h2>
+        <p class="section-copy">
+          The Sanctuary is a wellness application centered on guided meditation, reflective writing, archetypal exploration,
+          and structured journeys designed to help users slow down and reconnect with themselves.
+        </p>
+        <div class="product">
+          <div class="card">
+            <h3>What The Sanctuary includes</h3>
+            <ul class="checklist">
+              <li>Guided meditation experiences</li>
+              <li>Journaling and self-reflection tools</li>
+              <li>Structured multi-day personal growth journeys</li>
+              <li>Educational content related to mindfulness and introspection</li>
+              <li>Audio-based practices designed for calm and focus</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>See the beta in action</h3>
+            <p>
+              Watch the preview below for a look at The Sanctuary. If you would like to participate in beta testing,
+              please reach out and introduce yourself.
+            </p>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/KLPHt5M9SWA" title="The Sanctuary beta preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p class="small" style="margin-top: 14px;">
+              Interested in joining the beta? Email <a href="mailto:sanctuary@vitalsyntax.com">sanctuary@vitalsyntax.com</a>.
+            </p>
+          </div>
+        </div>
+        <div class="cta">
+          <strong>Interested in beta testing?</strong>
+          <div class="small" style="margin-top:8px; color: var(--muted);">
+            We welcome inquiries from people interested in participating in The Sanctuary beta. Use the Sanctuary contact address below to reach out.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-copy">
+          For business inquiries, consulting requests, product support, or beta interest, please use the information below.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>General</h3>
+            <p><a href="mailto:info@vitalsyntax.net">info@vitalsyntax.net</a></p>
+          </div>
+          <div class="card">
+            <h3>The Sanctuary</h3>
+            <p><a href="mailto:sanctuary@vitalsyntax.com">sanctuary@vitalsyntax.com</a></p>
+          </div>
+          <div class="card">
+            <h3>Business</h3>
+            <p>Vital Syntax LLC<br />vitalsyntax.net</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <strong>Vital Syntax LLC</strong>
+        <div class="small">Digital wellness, healthcare consulting, and reflective technology</div>
+      </div>
+      <div class="small">
+        © <span id="year"></span> Vital Syntax LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
