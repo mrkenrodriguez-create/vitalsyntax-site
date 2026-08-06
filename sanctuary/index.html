@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Sanctuary Mental Wellness | iOS & Android</title>
+  <meta name="description" content="Download The Sanctuary Mental Wellness for iOS and Android. Explore guided meditation, journaling, archetypal self-reflection, psycho-spiritual learning, and pathways to support." />
+  <meta property="og:title" content="The Sanctuary Mental Wellness" />
+  <meta property="og:description" content="A psycho-spiritual wellness experience for meditation, journaling, archetypal exploration, learning, and reflection—now available on iOS and Android." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vitalsyntax.net/sanctuary/" />
+  <meta property="og:image" content="https://vitalsyntax.net/logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0c111f" />
+  <link rel="canonical" href="https://vitalsyntax.net/sanctuary/" />
+  <style>
+    :root {
+      --bg: #08101b;
+      --bg-2: #101a2a;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.09);
+      --text: #f3f4f6;
+      --muted: #cbd5e1;
+      --soft: #94a3b8;
+      --gold: #d6ad57;
+      --gold-2: #f3d58e;
+      --violet: #a78bfa;
+      --aqua: #67e8f9;
+      --green: #86efac;
+      --line: rgba(255, 255, 255, 0.13);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+      --radius: 28px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 12% 6%, rgba(103, 232, 249, 0.15), transparent 25%),
+        radial-gradient(circle at 86% 8%, rgba(167, 139, 250, 0.16), transparent 27%),
+        radial-gradient(circle at 55% 55%, rgba(214, 173, 87, 0.08), transparent 30%),
+        linear-gradient(180deg, #07101b 0%, #101827 55%, #08101b 100%);
+      min-height: 100vh;
+    }
+
+    a { color: inherit; }
+
+    img { display: block; max-width: 100%; }
+
+    .wrap {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(8, 16, 27, 0.78);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+
+    .brand-copy {
+      display: grid;
+      line-height: 1.15;
+      gap: 4px;
+    }
+
+    .brand-copy strong { font-size: 1.03rem; }
+    .brand-copy span { color: var(--soft); font-size: .84rem; }
+
+    .top-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: .92rem;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+    }
+
+    .top-link:hover {
+      border-color: rgba(255,255,255,.26);
+      color: white;
+    }
+
+    .hero {
+      padding: 74px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.16fr .84fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(214, 173, 87, .28);
+      background: rgba(214, 173, 87, .08);
+      color: var(--gold-2);
+      font-weight: 800;
+      font-size: .88rem;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 18px rgba(134,239,172,.8);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 5.9rem);
+      letter-spacing: -.055em;
+      line-height: .95;
+      margin: 0 0 22px;
+      max-width: 780px;
+    }
+
+    h1 span {
+      display: block;
+      color: transparent;
+      background: linear-gradient(110deg, var(--gold-2), var(--aqua), #d8b4fe);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .lead {
+      margin: 0 0 28px;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.25rem);
+    }
+
+    .store-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .store-badge {
+      min-width: 218px;
+      min-height: 66px;
+      border-radius: 14px;
+      background: #050505;
+      color: white;
+      border: 1px solid rgba(255,255,255,.24);
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      padding: 11px 18px;
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(0,0,0,.25);
+      transition: transform .18s ease, border-color .18s ease;
+    }
+
+    .store-badge:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,.52);
+    }
+
+    .store-badge svg {
+      width: 32px;
+      height: 32px;
+      flex: 0 0 32px;
+    }
+
+    .store-label {
+      display: grid;
+      gap: 1px;
+      line-height: 1.05;
+    }
+
+    .store-label small { font-size: .72rem; color: #d1d5db; }
+    .store-label strong { font-size: 1.16rem; letter-spacing: -.01em; }
+
+    .availability {
+      color: var(--soft);
+      font-size: .92rem;
+    }
+
+    .app-card {
+      position: relative;
+      border-radius: 34px;
+      border: 1px solid rgba(255,255,255,.14);
+      background:
+        radial-gradient(circle at top, rgba(214,173,87,.17), transparent 28%),
+        linear-gradient(155deg, rgba(255,255,255,.10), rgba(255,255,255,.035));
+      padding: 32px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .app-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -70px -80px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(103,232,249,.08);
+      filter: blur(4px);
+    }
+
+    .app-icon {
+      width: 152px;
+      height: 152px;
+      margin: 0 auto 22px;
+      border-radius: 34px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 24px 55px rgba(0,0,0,.42);
+    }
+
+    .app-card h2 {
+      text-align: center;
+      margin: 0 0 7px;
+      font-size: 1.8rem;
+      letter-spacing: -.025em;
+    }
+
+    .app-card p {
+      margin: 0 auto;
+      text-align: center;
+      color: var(--muted);
+      max-width: 360px;
+    }
+
+    .app-card .made-by {
+      margin-top: 15px;
+      color: var(--gold-2);
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .78rem;
+      font-weight: 900;
+      color: var(--aqua);
+      margin-bottom: 8px;
+    }
+
+    h2.section-title {
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      letter-spacing: -.04em;
+      line-height: 1.02;
+      margin: 0 0 12px;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      margin: 0;
+      font-size: 1.04rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature {
+      padding: 24px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .feature .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 15px;
+      background: linear-gradient(145deg, rgba(214,173,87,.17), rgba(103,232,249,.11));
+      border: 1px solid rgba(255,255,255,.12);
+      font-size: 1.35rem;
+    }
+
+    .feature h3 {
+      margin: 0 0 8px;
+      font-size: 1.18rem;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .download-panel {
+      display: grid;
+      grid-template-columns: 1fr 310px;
+      gap: 28px;
+      align-items: center;
+      padding: 30px;
+      border-radius: 30px;
+      border: 1px solid rgba(214,173,87,.25);
+      background:
+        radial-gradient(circle at right, rgba(167,139,250,.13), transparent 35%),
+        linear-gradient(145deg, rgba(214,173,87,.10), rgba(255,255,255,.055));
+      box-shadow: var(--shadow);
+    }
+
+    .download-panel h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -.04em;
+      line-height: 1.03;
+    }
+
+    .download-panel p {
+      color: var(--muted);
+      margin: 0 0 20px;
+    }
+
+    .qr-card {
+      padding: 18px;
+      background: white;
+      color: #111827;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(0,0,0,.24);
+    }
+
+    .qr-card svg {
+      width: 100%;
+      height: auto;
+      max-width: 250px;
+      margin: 0 auto 9px;
+    }
+
+    .qr-card strong {
+      display: block;
+      font-size: .96rem;
+    }
+
+    .qr-card span {
+      display: block;
+      font-size: .8rem;
+      color: #475569;
+      margin-top: 3px;
+    }
+
+    .disclaimer {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      color: var(--soft);
+      font-size: .88rem;
+      background: rgba(255,255,255,.035);
+    }
+
+    footer {
+      padding: 48px 0 58px;
+      color: var(--soft);
+      font-size: .9rem;
+    }
+
+    .footer-row {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-row a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-row a:hover { color: white; }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .download-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .app-card {
+        max-width: 560px;
+      }
+
+      .qr-card {
+        max-width: 310px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .wrap { width: min(calc(100% - 28px), var(--max)); }
+      nav { min-height: 68px; }
+      .brand-copy span { display: none; }
+      .top-link { font-size: .82rem; padding: 9px 12px; }
+      .hero { padding-top: 48px; }
+      h1 { font-size: clamp(2.75rem, 15vw, 4rem); }
+      .feature-grid { grid-template-columns: 1fr; }
+      .store-badge { width: 100%; min-width: 0; }
+      .app-card,
+      .download-panel { padding: 22px; border-radius: 24px; }
+      .app-icon { width: 124px; height: 124px; border-radius: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="../" aria-label="Vital Syntax homepage">
+          <img src="../logo.jpg" alt="Vital Syntax logo" />
+          <span class="brand-copy">
+            <strong>Vital Syntax LLC</strong>
+            <span>Digital health and product innovation</span>
+          </span>
+        </a>
+        <a class="top-link" href="#download">Download the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Now available on iOS and Android</div>
+          <h1>The Sanctuary <span>Mental Wellness</span></h1>
+          <p class="lead">
+            A psycho-spiritual wellness experience for guided meditation, journaling,
+            archetypal self-exploration, learning, and meaningful reflection.
+          </p>
+
+          <div class="store-row" aria-label="App download links">
+            <a class="store-badge" href="https://apps.apple.com/us/app/the-sanctuary-mental-wellness/id6761027331" target="_blank" rel="noopener noreferrer" aria-label="Download The Sanctuary Mental Wellness on the App Store">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M16.7 12.9c0-2.8 2.3-4.1 2.4-4.2-1.3-2-3.4-2.2-4.1-2.2-1.8-.2-3.4 1-4.3 1-.9 0-2.3-1-3.8-.9-1.9 0-3.7 1.1-4.7 2.9-2 3.5-.5 8.7 1.4 11.5.9 1.4 2 2.9 3.5 2.8 1.4-.1 1.9-.9 3.6-.9 1.6 0 2.1.9 3.6.9 1.5 0 2.4-1.4 3.4-2.8 1.1-1.6 1.6-3.2 1.6-3.3-.1 0-2.6-1-2.6-4.8ZM13.8 4.6c.8-1 1.4-2.5 1.2-3.9-1.2.1-2.7.8-3.6 1.8-.8.9-1.5 2.4-1.3 3.8 1.4.1 2.8-.7 3.7-1.7Z"/>
+              </svg>
+              <span class="store-label">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.vitalsyntax.thesanctuary" target="_blank" rel="noopener noreferrer" aria-label="Get The Sanctuary Mental Wellness on Google Play">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#00d1ff" d="M3.2 2.5c-.5.5-.8 1.2-.8 2v15c0 .8.3 1.5.8 2l10-9.5-10-9.5Z"/>
+                <path fill="#00f076" d="m13.2 12 3.2-3.1L5.5 2.8c-.8-.4-1.6-.4-2.3-.3L13.2 12Z"/>
+                <path fill="#ffcf45" d="m13.2 12-10 9.5c.7.1 1.5.1 2.3-.3l10.9-6.1-3.2-3.1Z"/>
+                <path fill="#ff4b55" d="m21 10.6-4.6-2.6-3.2 3.1v1.8l3.2 3.1 4.6-2.6c1.3-.7 1.3-2.1 0-2.8Z"/>
+              </svg>
+              <span class="store-label">
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+
+          <div class="availability">Free to download • Optional monthly and annual subscriptions</div>
+        </div>
+
+        <aside class="app-card" aria-label="The Sanctuary app">
+          <img class="app-icon" src="../logo.jpg" alt="The Sanctuary Mental Wellness app icon" />
+          <h2>A space for inner exploration</h2>
+          <p>
+            Move through immersive practices and reflective tools designed to support
+            greater self-awareness, consistency, and personal meaning.
+          </p>
+          <p class="made-by">Created by Vital Syntax LLC</p>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Inside The Sanctuary</div>
+          <h2 class="section-title">Several paths. One integrated experience.</h2>
+          <p class="section-copy">
+            The Sanctuary brings contemplative practice, psycho-spiritual education, and
+            structured self-reflection together within a single digital environment.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="icon" aria-hidden="true">◉</div>
+            <h3>Guided meditation</h3>
+            <p>
+              Explore chakra-centered meditation experiences, custom timing options,
+              binaural audio, ambient sound, and guided presets.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="icon" aria-hidden="true">∞</div>
+            <h3>Archetypal journeys</h3>
+            <p>
+              Discover an archetypal profile and move through a structured 49-day journey
+              of insight, shadow work, recommended practices, and meditation.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="icon" aria-hidden="true">✦</div>
+            <h3>Journaling and learning</h3>
+            <p>
+              Record reflections and explore spiritual and psychological material within
+              the Lodge of Literature.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="icon" aria-hidden="true">⌁</div>
+            <h3>Pathways to support</h3>
+            <p>
+              Use the Forest of Finding to explore mental health providers and resources
+              when additional support is needed.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="download">
+      <div class="wrap">
+        <div class="download-panel">
+          <div>
+            <div class="section-kicker">Begin your journey</div>
+            <h2>Download The Sanctuary today.</h2>
+            <p>
+              Choose your platform below, or scan the QR code to return to this page from
+              another device.
+            </p>
+
+            <div class="store-row">
+              <a class="store-badge" href="https://apps.apple.com/us/app/the-sanctuary-mental-wellness/id6761027331" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                  <path d="M16.7 12.9c0-2.8 2.3-4.1 2.4-4.2-1.3-2-3.4-2.2-4.1-2.2-1.8-.2-3.4 1-4.3 1-.9 0-2.3-1-3.8-.9-1.9 0-3.7 1.1-4.7 2.9-2 3.5-.5 8.7 1.4 11.5.9 1.4 2 2.9 3.5 2.8 1.4-.1 1.9-.9 3.6-.9 1.6 0 2.1.9 3.6.9 1.5 0 2.4-1.4 3.4-2.8 1.1-1.6 1.6-3.2 1.6-3.3-.1 0-2.6-1-2.6-4.8ZM13.8 4.6c.8-1 1.4-2.5 1.2-3.9-1.2.1-2.7.8-3.6 1.8-.8.9-1.5 2.4-1.3 3.8 1.4.1 2.8-.7 3.7-1.7Z"/>
+                </svg>
+                <span class="store-label">
+                  <small>Download on the</small>
+                  <strong>App Store</strong>
+                </span>
+              </a>
+
+              <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.vitalsyntax.thesanctuary" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#00d1ff" d="M3.2 2.5c-.5.5-.8 1.2-.8 2v15c0 .8.3 1.5.8 2l10-9.5-10-9.5Z"/>
+                  <path fill="#00f076" d="m13.2 12 3.2-3.1L5.5 2.8c-.8-.4-1.6-.4-2.3-.3L13.2 12Z"/>
+                  <path fill="#ffcf45" d="m13.2 12-10 9.5c.7.1 1.5.1 2.3-.3l10.9-6.1-3.2-3.1Z"/>
+                  <path fill="#ff4b55" d="m21 10.6-4.6-2.6-3.2 3.1v1.8l3.2 3.1 4.6-2.6c1.3-.7 1.3-2.1 0-2.8Z"/>
+                </svg>
+                <span class="store-label">
+                  <small>GET IT ON</small>
+                  <strong>Google Play</strong>
+                </span>
+              </a>
+            </div>
+
+            <div class="disclaimer">
+              The Sanctuary is intended for general wellness, education, and personal
+              reflection. It is not a substitute for professional medical or mental health
+              care, diagnosis, or treatment.
+            </div>
+          </div>
+
+          <div class="qr-card" aria-label="QR code for The Sanctuary download page">
+            <svg width="29.6mm" height="29.6mm" version="1.1" viewBox="0 0 29.6 29.6" xmlns="http://www.w3.org/2000/svg"><path d="M3.2,3.2H4V4H3.2zM4,3.2H4.8V4H4zM4.8,3.2H5.6V4H4.8zM5.6,3.2H6.4V4H5.6zM6.4,3.2H7.2V4H6.4zM7.2,3.2H8V4H7.2zM8,3.2H8.8V4H8zM11.2,3.2H12V4H11.2zM12.8,3.2H13.6V4H12.8zM13.6,3.2H14.4V4H13.6zM14.4,3.2H15.2V4H14.4zM15.2,3.2H16V4H15.2zM18.4,3.2H19.2V4H18.4zM19.2,3.2H20V4H19.2zM20.8,3.2H21.6V4H20.8zM21.6,3.2H22.4V4H21.6zM22.4,3.2H23.2V4H22.4zM23.2,3.2H24V4H23.2zM24,3.2H24.8V4H24zM25.6,3.2H26.4V4H25.6zM3.2,4H4V4.8H3.2zM8,4H8.8V4.8H8zM9.6,4H10.4V4.8H9.6zM11.2,4H12V4.8H11.2zM12.8,4H13.6V4.8H12.8zM13.6,4H14.4V4.8H13.6zM16.8,4H17.6V4.8H16.8zM18.4,4H19.2V4.8H18.4zM24,4H24.8V4.8H24zM3.2,4.8H4V5.6H3.2zM4.8,4.8H5.6V5.6H4.8zM5.6,4.8H6.4V5.6H5.6zM6.4,4.8H7.2V5.6H6.4zM8,4.8H8.8V5.6H8zM10.4,4.8H11.2V5.6H10.4zM11.2,4.8H12V5.6H11.2zM13.6,4.8H14.4V5.6H13.6zM14.4,4.8H15.2V5.6H14.4zM15.2,4.8H16V5.6H15.2zM16,4.8H16.8V5.6H16zM16.8,4.8H17.6V5.6H16.8zM18.4,4.8H19.2V5.6H18.4zM20,4.8H20.8V5.6H20zM20.8,4.8H21.6V5.6H20.8zM21.6,4.8H22.4V5.6H21.6zM22.4,4.8H23.2V5.6H22.4zM24,4.8H24.8V5.6H24zM3.2,5.6H4V6.4H3.2zM4.8,5.6H5.6V6.4H4.8zM5.6,5.6H6.4V6.4H5.6zM6.4,5.6H7.2V6.4H6.4zM8,5.6H8.8V6.4H8zM9.6,5.6H10.4V6.4H9.6zM10.4,5.6H11.2V6.4H10.4zM11.2,5.6H12V6.4H11.2zM12,5.6H12.8V6.4H12zM13.6,5.6H14.4V6.4H13.6zM14.4,5.6H15.2V6.4H14.4zM15.2,5.6H16V6.4H15.2zM17.6,5.6H18.4V6.4H17.6zM18.4,5.6H19.2V6.4H18.4zM20,5.6H20.8V6.4H20zM20.8,5.6H21.6V6.4H20.8zM21.6,5.6H22.4V6.4H21.6zM22.4,5.6H23.2V6.4H22.4zM24,5.6H24.8V6.4H24zM3.2,6.4H4V7.2H3.2zM4.8,6.4H5.6V7.2H4.8zM5.6,6.4H6.4V7.2H5.6zM6.4,6.4H7.2V7.2H6.4zM8,6.4H8.8V7.2H8zM10.4,6.4H11.2V7.2H10.4zM11.2,6.4H12V7.2H11.2zM14.4,6.4H15.2V7.2H14.4zM15.2,6.4H16V7.2H15.2zM16,6.4H16.8V7.2H16zM18.4,6.4H19.2V7.2H18.4zM20,6.4H20.8V7.2H20zM20.8,6.4H21.6V7.2H20.8zM21.6,6.4H22.4V7.2H21.6zM22.4,6.4H23.2V7.2H22.4zM24,6.4H24.8V7.2H24zM3.2,7.2H4V8H3.2zM8,7.2H8.8V8H8zM10.4,7.2H11.2V8H10.4zM12,7.2H12.8V8H12zM13.6,7.2H14.4V8H13.6zM16.8,7.2H17.6V8H16.8zM18.4,7.2H19.2V8H18.4zM24,7.2H24.8V8H24zM3.2,8H4V8.8H3.2zM4,8H4.8V8.8H4zM4.8,8H5.6V8.8H4.8zM5.6,8H6.4V8.8H5.6zM6.4,8H7.2V8.8H6.4zM7.2,8H8V8.8H7.2zM8,8H8.8V8.8H8zM9.6,8H10.4V8.8H9.6zM11.2,8H12V8.8H11.2zM12.8,8H13.6V8.8H12.8zM14.4,8H15.2V8.8H14.4zM16,8H16.8V8.8H16zM16.8,8H17.6V8.8H16.8zM18.4,8H19.2V8.8H18.4zM19.2,8H20V8.8H19.2zM20,8H20.8V8.8H20zM20.8,8H21.6V8.8H20.8zM21.6,8H22.4V8.8H21.6zM22.4,8H23.2V8.8H22.4zM23.2,8H24V8.8H23.2zM24,8H24.8V8.8H24zM3.2,9.6H4V10.4H3.2zM4,9.6H4.8V10.4H4zM4.8,9.6H5.6V10.4H4.8zM5.6,9.6H6.4V10.4H5.6zM8,9.6H8.8V10.4H8zM9.6,9.6H10.4V10.4H9.6zM10.4,9.6H11.2V10.4H10.4zM11.2,9.6H12V10.4H11.2zM12.8,9.6H13.6V10.4H12.8zM14.4,9.6H15.2V10.4H14.4zM16,9.6H16.8V10.4H16zM17.6,9.6H18.4V10.4H17.6zM18.4,9.6H19.2V10.4H18.4zM19.2,9.6H20V10.4H19.2zM21.6,9.6H22.4V10.4H21.6zM23.2,9.6H24V10.4H23.2zM24.8,9.6H25.6V10.4H24.8zM25.6,9.6H26.4V10.4H25.6zM3.2,10.4H4V11.2H3.2zM4.8,10.4H5.6V11.2H4.8zM6.4,10.4H7.2V11.2H6.4zM7.2,10.4H8V11.2H7.2zM8,10.4H8.8V11.2H8zM12,10.4H12.8V11.2H12zM12.8,10.4H13.6V11.2H12.8zM13.6,10.4H14.4V11.2H13.6zM14.4,10.4H15.2V11.2H14.4zM16,10.4H16.8V11.2H16zM16.8,10.4H17.6V11.2H16.8zM17.6,10.4H18.4V11.2H17.6zM19.2,10.4H20V11.2H19.2zM20,10.4H20.8V11.2H20zM21.6,10.4H22.4V11.2H21.6zM22.4,10.4H23.2V11.2H22.4zM23.2,10.4H24V11.2H23.2zM24,10.4H24.8V11.2H24zM3.2,11.2H4V12H3.2zM4,11.2H4.8V12H4zM5.6,11.2H6.4V12H5.6zM8,11.2H8.8V12H8zM9.6,11.2H10.4V12H9.6zM12,11.2H12.8V12H12zM13.6,11.2H14.4V12H13.6zM15.2,11.2H16V12H15.2zM16,11.2H16.8V12H16zM16.8,11.2H17.6V12H16.8zM18.4,11.2H19.2V12H18.4zM21.6,11.2H22.4V12H21.6zM24.8,11.2H25.6V12H24.8zM25.6,11.2H26.4V12H25.6zM4,12H4.8V12.8H4zM7.2,12H8V12.8H7.2zM8.8,12H9.6V12.8H8.8zM11.2,12H12V12.8H11.2zM12,12H12.8V12.8H12zM13.6,12H14.4V12.8H13.6zM16,12H16.8V12.8H16zM16.8,12H17.6V12.8H16.8zM20,12H20.8V12.8H20zM20.8,12H21.6V12.8H20.8zM21.6,12H22.4V12.8H21.6zM22.4,12H23.2V12.8H22.4zM24,12H24.8V12.8H24zM24.8,12H25.6V12.8H24.8zM4,12.8H4.8V13.6H4zM4.8,12.8H5.6V13.6H4.8zM7.2,12.8H8V13.6H7.2zM10.4,12.8H11.2V13.6H10.4zM12,12.8H12.8V13.6H12zM12.8,12.8H13.6V13.6H12.8zM13.6,12.8H14.4V13.6H13.6zM16,12.8H16.8V13.6H16zM19.2,12.8H20V13.6H19.2zM21.6,12.8H22.4V13.6H21.6zM23.2,12.8H24V13.6H23.2zM25.6,12.8H26.4V13.6H25.6zM3.2,13.6H4V14.4H3.2zM4.8,13.6H5.6V14.4H4.8zM5.6,13.6H6.4V14.4H5.6zM6.4,13.6H7.2V14.4H6.4zM9.6,13.6H10.4V14.4H9.6zM10.4,13.6H11.2V14.4H10.4zM12,13.6H12.8V14.4H12zM12.8,13.6H13.6V14.4H12.8zM13.6,13.6H14.4V14.4H13.6zM15.2,13.6H16V14.4H15.2zM16.8,13.6H17.6V14.4H16.8zM20,13.6H20.8V14.4H20zM21.6,13.6H22.4V14.4H21.6zM22.4,13.6H23.2V14.4H22.4zM23.2,13.6H24V14.4H23.2zM24,13.6H24.8V14.4H24zM4,14.4H4.8V15.2H4zM5.6,14.4H6.4V15.2H5.6zM6.4,14.4H7.2V15.2H6.4zM7.2,14.4H8V15.2H7.2zM8,14.4H8.8V15.2H8zM8.8,14.4H9.6V15.2H8.8zM10.4,14.4H11.2V15.2H10.4zM12,14.4H12.8V15.2H12zM13.6,14.4H14.4V15.2H13.6zM16.8,14.4H17.6V15.2H16.8zM18.4,14.4H19.2V15.2H18.4zM19.2,14.4H20V15.2H19.2zM21.6,14.4H22.4V15.2H21.6zM22.4,14.4H23.2V15.2H22.4zM23.2,14.4H24V15.2H23.2zM24,14.4H24.8V15.2H24zM25.6,14.4H26.4V15.2H25.6zM3.2,15.2H4V16H3.2zM4,15.2H4.8V16H4zM4.8,15.2H5.6V16H4.8zM5.6,15.2H6.4V16H5.6zM6.4,15.2H7.2V16H6.4zM8.8,15.2H9.6V16H8.8zM9.6,15.2H10.4V16H9.6zM11.2,15.2H12V16H11.2zM15.2,15.2H16V16H15.2zM17.6,15.2H18.4V16H17.6zM18.4,15.2H19.2V16H18.4zM20,15.2H20.8V16H20zM20.8,15.2H21.6V16H20.8zM22.4,15.2H23.2V16H22.4zM23.2,15.2H24V16H23.2zM24,15.2H24.8V16H24zM3.2,16H4V16.8H3.2zM4.8,16H5.6V16.8H4.8zM5.6,16H6.4V16.8H5.6zM8,16H8.8V16.8H8zM10.4,16H11.2V16.8H10.4zM11.2,16H12V16.8H11.2zM12.8,16H13.6V16.8H12.8zM14.4,16H15.2V16.8H14.4zM15.2,16H16V16.8H15.2zM16.8,16H17.6V16.8H16.8zM18.4,16H19.2V16.8H18.4zM20,16H20.8V16.8H20zM20.8,16H21.6V16.8H20.8zM21.6,16H22.4V16.8H21.6zM24,16H24.8V16.8H24zM25.6,16H26.4V16.8H25.6zM4,16.8H4.8V17.6H4zM5.6,16.8H6.4V17.6H5.6zM8,16.8H8.8V17.6H8zM8.8,16.8H9.6V17.6H8.8zM11.2,16.8H12V17.6H11.2zM12.8,16.8H13.6V17.6H12.8zM16.8,16.8H17.6V17.6H16.8zM18.4,16.8H19.2V17.6H18.4zM20,16.8H20.8V17.6H20zM21.6,16.8H22.4V17.6H21.6zM22.4,16.8H23.2V17.6H22.4zM23.2,16.8H24V17.6H23.2zM24.8,16.8H25.6V17.6H24.8zM25.6,16.8H26.4V17.6H25.6zM3.2,17.6H4V18.4H3.2zM5.6,17.6H6.4V18.4H5.6zM6.4,17.6H7.2V18.4H6.4zM10.4,17.6H11.2V18.4H10.4zM12,17.6H12.8V18.4H12zM13.6,17.6H14.4V18.4H13.6zM14.4,17.6H15.2V18.4H14.4zM15.2,17.6H16V18.4H15.2zM16,17.6H16.8V18.4H16zM16.8,17.6H17.6V18.4H16.8zM17.6,17.6H18.4V18.4H17.6zM18.4,17.6H19.2V18.4H18.4zM19.2,17.6H20V18.4H19.2zM21.6,17.6H22.4V18.4H21.6zM22.4,17.6H23.2V18.4H22.4zM24,17.6H24.8V18.4H24zM3.2,18.4H4V19.2H3.2zM4.8,18.4H5.6V19.2H4.8zM5.6,18.4H6.4V19.2H5.6zM6.4,18.4H7.2V19.2H6.4zM8,18.4H8.8V19.2H8zM8.8,18.4H9.6V19.2H8.8zM10.4,18.4H11.2V19.2H10.4zM12,18.4H12.8V19.2H12zM12.8,18.4H13.6V19.2H12.8zM13.6,18.4H14.4V19.2H13.6zM14.4,18.4H15.2V19.2H14.4zM16.8,18.4H17.6V19.2H16.8zM17.6,18.4H18.4V19.2H17.6zM19.2,18.4H20V19.2H19.2zM21.6,18.4H22.4V19.2H21.6zM24,18.4H24.8V19.2H24zM25.6,18.4H26.4V19.2H25.6zM9.6,19.2H10.4V20H9.6zM10.4,19.2H11.2V20H10.4zM11.2,19.2H12V20H11.2zM12,19.2H12.8V20H12zM14.4,19.2H15.2V20H14.4zM16,19.2H16.8V20H16zM16.8,19.2H17.6V20H16.8zM18.4,19.2H19.2V20H18.4zM20,19.2H20.8V20H20zM20.8,19.2H21.6V20H20.8zM21.6,19.2H22.4V20H21.6zM22.4,19.2H23.2V20H22.4zM24,19.2H24.8V20H24zM24.8,19.2H25.6V20H24.8zM3.2,20H4V20.8H3.2zM4,20H4.8V20.8H4zM4.8,20H5.6V20.8H4.8zM5.6,20H6.4V20.8H5.6zM6.4,20H7.2V20.8H6.4zM7.2,20H8V20.8H7.2zM8,20H8.8V20.8H8zM9.6,20H10.4V20.8H9.6zM10.4,20H11.2V20.8H10.4zM12.8,20H13.6V20.8H12.8zM14.4,20H15.2V20.8H14.4zM16.8,20H17.6V20.8H16.8zM19.2,20H20V20.8H19.2zM20.8,20H21.6V20.8H20.8zM22.4,20H23.2V20.8H22.4zM23.2,20H24V20.8H23.2zM24,20H24.8V20.8H24zM3.2,20.8H4V21.6H3.2zM8,20.8H8.8V21.6H8zM11.2,20.8H12V21.6H11.2zM12.8,20.8H13.6V21.6H12.8zM14.4,20.8H15.2V21.6H14.4zM15.2,20.8H16V21.6H15.2zM16,20.8H16.8V21.6H16zM18.4,20.8H19.2V21.6H18.4zM19.2,20.8H20V21.6H19.2zM20.8,20.8H21.6V21.6H20.8zM21.6,20.8H22.4V21.6H21.6zM22.4,20.8H23.2V21.6H22.4zM23.2,20.8H24V21.6H23.2zM24.8,20.8H25.6V21.6H24.8zM25.6,20.8H26.4V21.6H25.6zM3.2,21.6H4V22.4H3.2zM4.8,21.6H5.6V22.4H4.8zM5.6,21.6H6.4V22.4H5.6zM6.4,21.6H7.2V22.4H6.4zM8,21.6H8.8V22.4H8zM9.6,21.6H10.4V22.4H9.6zM10.4,21.6H11.2V22.4H10.4zM11.2,21.6H12V22.4H11.2zM12.8,21.6H13.6V22.4H12.8zM13.6,21.6H14.4V22.4H13.6zM14.4,21.6H15.2V22.4H14.4zM16,21.6H16.8V22.4H16zM18.4,21.6H19.2V22.4H18.4zM21.6,21.6H22.4V22.4H21.6zM22.4,21.6H23.2V22.4H22.4zM24,21.6H24.8V22.4H24zM25.6,21.6H26.4V22.4H25.6zM3.2,22.4H4V23.2H3.2zM4.8,22.4H5.6V23.2H4.8zM5.6,22.4H6.4V23.2H5.6zM6.4,22.4H7.2V23.2H6.4zM8,22.4H8.8V23.2H8zM9.6,22.4H10.4V23.2H9.6zM10.4,22.4H11.2V23.2H10.4zM12,22.4H12.8V23.2H12zM12.8,22.4H13.6V23.2H12.8zM13.6,22.4H14.4V23.2H13.6zM14.4,22.4H15.2V23.2H14.4zM16.8,22.4H17.6V23.2H16.8zM20,22.4H20.8V23.2H20zM20.8,22.4H21.6V23.2H20.8zM22.4,22.4H23.2V23.2H22.4zM24,22.4H24.8V23.2H24zM24.8,22.4H25.6V23.2H24.8zM25.6,22.4H26.4V23.2H25.6zM3.2,23.2H4V24H3.2zM4.8,23.2H5.6V24H4.8zM5.6,23.2H6.4V24H5.6zM6.4,23.2H7.2V24H6.4zM8,23.2H8.8V24H8zM9.6,23.2H10.4V24H9.6zM10.4,23.2H11.2V24H10.4zM13.6,23.2H14.4V24H13.6zM16,23.2H16.8V24H16zM17.6,23.2H18.4V24H17.6zM18.4,23.2H19.2V24H18.4zM20,23.2H20.8V24H20zM21.6,23.2H22.4V24H21.6zM22.4,23.2H23.2V24H22.4zM24,23.2H24.8V24H24zM3.2,24H4V24.8H3.2zM8,24H8.8V24.8H8zM9.6,24H10.4V24.8H9.6zM10.4,24H11.2V24.8H10.4zM11.2,24H12V24.8H11.2zM12.8,24H13.6V24.8H12.8zM14.4,24H15.2V24.8H14.4zM16,24H16.8V24.8H16zM18.4,24H19.2V24.8H18.4zM19.2,24H20V24.8H19.2zM20.8,24H21.6V24.8H20.8zM21.6,24H22.4V24.8H21.6zM22.4,24H23.2V24.8H22.4zM23.2,24H24V24.8H23.2zM24,24H24.8V24.8H24zM24.8,24H25.6V24.8H24.8zM25.6,24H26.4V24.8H25.6zM3.2,24.8H4V25.6H3.2zM4,24.8H4.8V25.6H4zM4.8,24.8H5.6V25.6H4.8zM5.6,24.8H6.4V25.6H5.6zM6.4,24.8H7.2V25.6H6.4zM7.2,24.8H8V25.6H7.2zM8,24.8H8.8V25.6H8zM10.4,24.8H11.2V25.6H10.4zM11.2,24.8H12V25.6H11.2zM12,24.8H12.8V25.6H12zM12.8,24.8H13.6V25.6H12.8zM13.6,24.8H14.4V25.6H13.6zM15.2,24.8H16V25.6H15.2zM16,24.8H16.8V25.6H16zM16.8,24.8H17.6V25.6H16.8zM18.4,24.8H19.2V25.6H18.4zM21.6,24.8H22.4V25.6H21.6zM22.4,24.8H23.2V25.6H22.4zM24,24.8H24.8V25.6H24zM25.6,24.8H26.4V25.6H25.6zM10.4,25.6H11.2V26.4H10.4zM12,25.6H12.8V26.4H12zM13.6,25.6H14.4V26.4H13.6zM16.8,25.6H17.6V26.4H16.8zM17.6,25.6H18.4V26.4H17.6zM18.4,25.6H19.2V26.4H18.4zM19.2,25.6H20V26.4H19.2zM21.6,25.6H22.4V26.4H21.6zM22.4,25.6H23.2V26.4H22.4zM24,25.6H24.8V26.4H24z" id="qr-path" fill="#000000" fill-opacity="1" fill-rule="nonzero" stroke="none"/></svg>
+            <strong>Scan to download</strong>
+            <span>vitalsyntax.net/sanctuary</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© 2026 Vital Syntax LLC. All rights reserved.</span>
+      <span>
+        <a href="../">Vital Syntax</a>
+        &nbsp;•&nbsp;
+        <a href="mailto:sanctuary@vitalsyntax.com">Contact</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
